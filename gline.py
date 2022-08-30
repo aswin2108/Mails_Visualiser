@@ -41,6 +41,7 @@ for (message_id, message) in list(messages.items()):
     dns = pieces[1]
     if dns not in orgs : continue
     month = message[3][:7]
+    #change the above 7 to 4 if you need the data by year
     if month not in months : months.append(month)
     key = (month, dns)
     counts[key] = counts.get(key,0) + 1
